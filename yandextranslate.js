@@ -31,7 +31,7 @@ var yatr = {
 		ajax.send(null);
 	},
 	
-	revert : function (id) {
+  revert : function (id) {
 	document.getElementById(id).innerHTML = this.lines[id];
 	}
 };
