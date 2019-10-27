@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<title>Yandex Translate</title>
+		<script type="text/javascript" src="yandextranslate.js"></script>
+		<style type="text/css">
+			textarea {
+				display: block;
+				width: 800px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			
+			textarea, label {
+				font-size: 1.2em;
+				font-family: sans-serif;
+			}
+			
+			label {
+				width: 200px;
+				text-align: center;
+				display: block;
+				margin: 20px auto;
+			}
+			
+			hr {
+				border: none;
+				border-bottom: 1px dashed lightgrey;
+			}
+			
+			#result {
+				width: 800px;
+				margin: 0 auto;
+				font-family: serif;
+				font-size: 1.2em;
+				line-height: 1.5;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<label class="select" onchange="yatr.translate('text', 'result');">
+			Языки
+			<select id="lang">
+			</select>
+		</label>
+		<textarea id="text" onkeyup="yatr.translate('text', 'result');"></textarea>
+		<hr/>
+		<div id="result">
+		</div>
+		<script type="text/javascript">
+			yatr.getLangs();
+		</script>
+	</body>
+</html>
